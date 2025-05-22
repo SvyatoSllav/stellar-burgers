@@ -47,10 +47,7 @@ export const logout = createAsyncThunk('user/logout', async () => {
   return response;
 });
 
-export const updateUser = createAsyncThunk(
-  'user/updateUser',
-  async (registerData: TRegisterData) => await updateUserApi(registerData)
-);
+export const updateUser = createAsyncThunk('user/updateUser', updateUserApi);
 
 const userSlice = createSlice({
   name: 'user',
